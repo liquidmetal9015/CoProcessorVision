@@ -9,7 +9,7 @@ class Pipeline:
     next call the process method,
     finally get and use the outputs.
     """
-    
+
     def __init__(self):
         """initializes all values to presets or None if need to be set
         """
@@ -38,7 +38,7 @@ class Pipeline:
         self.__filter_contours_max_ratio = 1000.0
         self.filter_contours_output = None
 
-    
+
     def process(self):
         """Runs the pipeline.
         Sets outputs to new values.
@@ -61,7 +61,7 @@ class Pipeline:
         """
         assert isinstance(value, numpy.ndarray) , "Source must be of type numpy.ndarray"
         self.__source0 = value
-    
+
 
 
     @staticmethod
@@ -139,6 +139,3 @@ class Pipeline:
                 continue
             output.append(contour)
         return output
-
-
-
